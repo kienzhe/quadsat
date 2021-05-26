@@ -49,8 +49,6 @@ line3.onclick = function(){
 
 
 
-
-
 //Buttons for the guideline
 var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
 var tabPanels=document.querySelectorAll(".tabContainer  .tabPanel ");
