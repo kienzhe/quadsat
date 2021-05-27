@@ -3,11 +3,13 @@
 var fullname = document.forms["vform"]["fullname"];
 var email = document.forms["vform"]["email"];
 var phone = document.forms["vform"]["phone"];
+var message = document.forms["vform"]["message"];
 
 //getting error display
 var name_error = document.getElementById("name_error");
 var email_error = document.getElementById("email_error");
 var phone_error = document.getElementById("phone_error");
+var message_error = document.getElementById("message_error");
 
 //function
 function validate(){
@@ -40,4 +42,16 @@ function validate(){
     phone.style.border = "1px solid white";
     phone_error.textContent = ""
   }
+  
+  if (message.value.length <= 100){
+    message.style.border = "1px solid red";
+    message_error.textContent = "This is a required field";
+    message.focus();
+    return false;
+  } else {
+    message.style.border = "1px solid white";
+    message_error.textContent = ""
+  }
+  alert("Your question has been submitted")
+  return true;
 }
